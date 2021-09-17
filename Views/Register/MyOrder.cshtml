@@ -1,0 +1,53 @@
+﻿@model Dictionary<int, List<OrderViewModel>>
+
+
+
+   <h2>Previous orders</h2>
+    <table class="table table-hover">
+        <tbody>
+            <tr>
+                @foreach (var item in Model)
+                {
+                   
+                    @foreach (var orders in item.Value)
+                    {
+            <div class="card mb-3" style="max-width: 400px; max-height:200px">
+                <div class="row no-gutters">
+                    <div class="col-md-5">
+                        <img style="height:200px;width:170px" src="@orders.foodItem.img_url"  alt="...">
+                    </div>
+                    <div class="col-md-7">
+                        <div class="card-body">
+                            <h5 class="card-title">@orders.foodItem.name</h5>
+                            <p ><small class="text-muted">Quantity @orders.quantity</small></p>
+                            <p ><small class="text-muted">Ordered on @orders.orderedon</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                        @*<td>
+                            <img class="orderimg" src="@orders.foodItem.img_url" />
+                        </td>
+                        <td>
+                            <h6>@orders.foodItem.name</h6>
+                            <h6>@(orders.foodItem.price.ToString("c", System.Globalization.CultureInfo.CreateSpecificCulture("hi-IN")))</h6>
+                            <h6>
+                                @if (@orders.foodItem.isVeg)
+                                {
+                                    <img class="isveg" src="~/lib/images/veg.png" />
+                                }
+                                else
+                                {
+                                    <img class="isveg" src="~/lib/images/nonveg.png" />
+                                }
+                            </h6>
+                            <h6>Quantity: @orders.quantity</h6>
+                        </td>*@
+                       
+
+                }}
+                </tr>
+
+
+            </tbody>
+    </table>

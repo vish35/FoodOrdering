@@ -1,0 +1,8 @@
+﻿@model Foodordering.Models.Searchkey
+
+<li class="nav-item">
+    <form class="d-flex" asp-controller="Home" asp-action="Search" method="post">
+        <input asp-for="str" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn" type="submit">Search</button>
+    </form>
+</li>

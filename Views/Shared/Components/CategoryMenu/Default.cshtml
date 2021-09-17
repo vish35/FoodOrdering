@@ -1,0 +1,29 @@
+﻿@model IEnumerable<MealType>
+
+<ul class="nav nav-pills nav-fill">
+    @foreach (var type in Model)
+    {
+        <li class="nav-item">
+            <strong>
+                <a class="nav-link " aria-current="page" asp-controller="FoodItem" asp-action="Index"
+                   asp-route-mealid="@type.MealId">@type.MealName</a>
+            </strong>
+        </li>
+    }
+    </ul>
+@*<li class="dropdown">
+    <a asp-controller="FoodItem" asp-action="Index" class="dropdown-toggle" data-toggle="dropdown">Meals<b class="caret"></b></a>
+    <ul class="dropdown-menu">
+        @foreach (var type in Model)
+        {
+            <li>
+                <a asp-controller="FoodItem" asp-action="Index"
+                   asp-route-mealid="@type.MealId">@type.MealName</a>
+            </li>
+
+        }
+        <li>
+            <a asp-controller="FoodItem" asp-action="Index"  asp-route-mealid="0">View All Paintings</a>
+        </li>
+    </ul>
+</li>*@

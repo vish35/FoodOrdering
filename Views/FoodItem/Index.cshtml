@@ -1,0 +1,17 @@
+﻿@model FoodListViewModel
+
+<div class="row" style="margin:40px">
+
+    @if (Model.FoodItems.Count() > 0) { 
+    @foreach (var item in Model.FoodItems)
+    {
+        <partial name="_foodCard" model="item" />
+
+    }
+    }
+    else
+            {
+                <h4>No items of selected meal type</h4>
+            }
+
+</div> 

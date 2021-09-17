@@ -1,0 +1,154 @@
+﻿
+.table {
+    background-color: ghostwhite;
+    color: black;
+}
+body {
+    /*  background-image: url('/images/Leaves.jfif');*/
+    background-size: cover;
+    font-family: 'Lora';
+    font-size: 20px;
+   /* padding-top: 70px;*/
+    background-color: #F4E4CD;
+}
+.card-img-top{
+    width:250px;
+    height:200px;
+}
+/*.card-img {
+    width: 50px !important;
+    height: 10px !important;
+}*/
+.card-text {
+    height: 60px;
+}
+.card-title{
+    height:40px;
+}
+.foodcard{
+    height:400px;
+}
+
+.slide-image {
+    width: 100%;
+}
+
+
+.carousel-holder {
+    margin-bottom: 30px;
+}
+
+.carousel-control,
+.item {
+    border-radius: 4px;
+}
+
+.caption {
+    height: 130px;
+    overflow: hidden;
+}
+
+    .caption h4 {
+        white-space: nowrap;
+    }
+
+.thumbnail img {
+    width: 100%;
+}
+
+.addToCart {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+    .thumbnail .caption-full {
+        padding: 9px;
+        color: #333;
+    }
+
+footer {
+  /* position: fixed;*/
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #FFC107;
+    color: #121416;
+    text-align: center;
+}
+.heart {
+    
+    content: "\2764";
+
+}
+.navbar {
+    background-image: none;
+}
+
+.navbar-inverse {
+   
+    border-color: #a593c2;
+}
+
+#btnlink{
+    color:midnightblue;
+    background-color:darkorange;
+    font-size:25px;
+
+
+}
+
+/* li a {
+    font-size: 20px;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    
+    padding:15px;
+    text-decoration:none;
+    font-family:Kalam;
+       
+
+}
+*/
+ 
+.carousel .item {
+    height: 400px;
+}
+
+.lnk{
+    text-decoration:none;
+  font-size:20px;
+
+}
+
+a{
+    text-decoration:none;
+}
+/*
+   li a:hover {
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.50);
+    }
+*/
+.item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 400px;
+}
+.isveg{
+    height:20px;
+    width:20px;
+}
+/*.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
+    background-color:  #fcaeae !important;
+    border-color: #fba1a1 !important;
+}*/
+
+.btn {
+    background-color: #f04d24 !important;
+    border-color: #fba1a1 !important;
+}
+
+

@@ -1,0 +1,40 @@
+﻿@model FoodItem
+
+<div class="col-sm-3">
+    <div class="foodcard card-deck ">
+        <div class="card shadow">
+            <img class="card-img-top img-thumbnail" src="@Model.img_url" />
+            <div class="card-body">
+                <h4 class="pull-right">
+                    @(Model.price.ToString("c", System.Globalization.CultureInfo.CreateSpecificCulture("hi-IN")))<span>
+                        @if (Model.isVeg)
+                        {
+                            <img class="isveg" src="~/lib/images/veg.png" />
+                        }
+                        else
+                        {
+                            <img class="isveg" src="~/lib/images/nonveg.png" />
+                        }
+                    </span>
+                </h4>
+                <h4 class="card-title">
+                    <a asp-controller="FoodItem" asp-action="Details" asp-route-id="@Model.id">
+
+                        <strong>@Model.name</strong>
+                    </a>
+
+                   
+                </h4>
+                <p class="card-text">
+                     @Model.description 
+                </p>
+                <a class="lnk btn btn-success btn-block" asp-controller="ShoppingCart" asp-action="AddToShoppingCart" asp-route-itemid="@Model.id">
+                    Add to Cart
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+

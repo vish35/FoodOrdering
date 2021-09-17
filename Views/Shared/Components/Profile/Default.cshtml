@@ -1,0 +1,22 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using Foodordering.Areas.Identity.Data
+
+@inject SignInManager<FoodorderingUser> SignInManager
+@inject UserManager<FoodorderingUser> UserManager
+<li class="dropdown">
+   
+
+    <a id="manage" class="nav-link text-dark dropdown-toggle" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage" data-toggle="dropdown">Hi @UserManager.GetUserAsync(User).Result.UserName!<b class="caret"></b></a>
+    <ul class="dropdown-menu" style="background-color: #FFC107;
+        color: black">
+
+        <li>
+            <a style="text-decoration:none ;color:black" asp-controller="Register" asp-action="MyOrder" asp-route-mailid="@UserManager.GetUserAsync(User).Result.Email">My orders</a>
+        </li>
+        <li class="nav-item">
+            <form style="background-color: #FFC107;" id="logoutForm"  asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                <input  style="background-color: #FFC107;color: black ;border:none" id="logout" type="submit" value="Logout"/>
+            </form>
+        </li>
+    </ul>
+</li>

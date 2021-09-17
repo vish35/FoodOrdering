@@ -1,0 +1,43 @@
+﻿@model IEnumerable<FoodItem>
+
+<html>
+<head>
+
+</head>
+<body>
+    <div>
+        <h1 class="text-muted" style="color:orangered; ">Menu Card</h1>
+    </div>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Veg/Non-Veg</th>
+                <th>Price</th>
+               
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+
+
+            <tr>
+
+                <td>@item.name</td>
+                @if (item.isVeg == true)
+                {
+                    <td>Veg</td>
+                 }
+                else
+                {
+                    <td>Non-veg</td>
+                   }
+                <td>@item.price</td>
+            </tr>
+
+            }
+        </tbody>
+    </table>
+</body>
+</html>
